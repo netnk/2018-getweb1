@@ -12,7 +12,7 @@ namespace getweb1
     {
         public string get_stock1(string stock_num)
         {
-            string url = "https://tw.stock.yahoo.com/q/q?s=" + stock_num;
+            string url = string.Format("https://tw.stock.yahoo.com/q/q?s={0}", stock_num);
             string result = get_url(url, 1);
             HtmlDocument htmlDoc = new HtmlDocument();
             htmlDoc.LoadHtml(result);
